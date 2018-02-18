@@ -26,7 +26,7 @@ public class DineIn extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.labels_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); //untuk menambahkan string ke dalam spinner yang sudah dibuat
         if (e != null) {
             e.setAdapter(adapter);
         }
@@ -49,39 +49,19 @@ public class DineIn extends AppCompatActivity implements AdapterView.OnItemSelec
                 String meja = e.getSelectedItem().toString();
 
                 if(meja.equalsIgnoreCase("meja 1")){
-                    Toast.makeText(DineIn.this,"Meja 1", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DineIn.this,"Meja 1", Toast.LENGTH_SHORT).show(); //menampilkan notifikasi ketika meja 1 terpilih
                 } else if (meja.equalsIgnoreCase("meja 2")){
-                    Toast.makeText(DineIn.this,"Meja 2", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DineIn.this,"Meja 2", Toast.LENGTH_SHORT).show(); //menampilkan notifikasi ketika meja 2 terpilih
                 }else if (meja.equalsIgnoreCase("meja 3")){
-                    Toast.makeText(DineIn.this,"Meja 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DineIn.this,"Meja 3", Toast.LENGTH_SHORT).show(); //menampilkan notifikasi ketika meja 3 terpilih
                 }else if (meja.equalsIgnoreCase("meja 4")){
-                    Toast.makeText(DineIn.this,"Meja 4", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DineIn.this,"Meja 4", Toast.LENGTH_SHORT).show(); //menampilkan notifikasi ketika meja 4 terpilih
                 }
-                Intent t = new Intent(DineIn.this, ListMenu.class);
+                Intent t = new Intent(DineIn.this, ListMenu.class); //menghubungkan DineIn dengan ListMenu menggunakan intent
                 startActivity(t);
             }
 
         });
-
-
-//    public void convert(View view) {
-//        b = (EditText) findViewById(R.id.angka1);
-//        c = (EditText) findViewById(R.id.angka2);
-//        String cur = d.getSelectedItem().toString();
-//        String cur2 = e.getSelectedItem().toString();
-//
-//        if (b ==null && c==null){
-//            Toast.makeText(this,"Isi dulu gan", Toast.LENGTH_LONG).show();
-//        } else if (cur.equalsIgnoreCase("usd") && cur2.equalsIgnoreCase("idr")){
-//            String angka = b.getText().toString();
-//            int test = Integer.parseInt(angka);
-//            double hsl = test * 14285.7143;
-//            String hs11 = String.valueOf(hsl);
-//            c.setText(hs11);
-//        }
-//
-//    }
-
 
 
     }

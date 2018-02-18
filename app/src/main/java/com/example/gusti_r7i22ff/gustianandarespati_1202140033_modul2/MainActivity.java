@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 }else if(selectedId == b.getId()){                      //untuk memanggil id radio button yang kedua
                     Toast.makeText(MainActivity.this,               //memunculkan notifikasi toast
                             "Take Away", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, TakeAway.class);
+                    Intent intent = new Intent(MainActivity.this, TakeAway.class); //untuk menghubungkan mainactivity dengan takeaway menggunakan intent
                     startActivity(intent);
                 }
             }

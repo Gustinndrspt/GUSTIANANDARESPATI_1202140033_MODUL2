@@ -24,6 +24,8 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         new Handler().postDelayed(new Runnable() {
+            // Handler menjadwalkan pesan atau Runnable untuk dieksekusi
+            //Runnable merupakan bagian yang akan di eksekusi
 
 
             @Override
